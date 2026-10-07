@@ -13,6 +13,7 @@ main{
 
     background: #09487b;
     padding: 1rem;
+    position: relative;
 }
 
 .nav-container{
@@ -22,7 +23,7 @@ main{
     align-items: center;
     max-width: 1000px;
     margin: 0 auto;
-
+    
 }
 
 .nav-links ul{
@@ -125,4 +126,34 @@ main{
 .hero-content button:hover{
     background-color: cadetblue;
 }
+.menu-btn{
+    display: none;
+    background: none;
+    cursor: pointer;
+    border: none;
+    color: white;
+    font-size: 2rem;
+}
 
+@media (max-width: 768px){
+    .menu-btn{
+        display: block;
+    }
+    .nav-links ul{
+        display: none;
+        flex-direction: column;
+        gap: 1rem;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        border: 1px solid white;
+        width: 100%;
+        background-color: #09487b;
+        padding: 1rem 2rem;
+
+    }
+
+    .nav-links.open ul{
+        display: flex;
+    }
+}
